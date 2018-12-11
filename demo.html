@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>曲线实例</title>
+	<script type="text/javascript" src="echarts.min.js"></script>
+</head>
+<body>
+	<div id="chart_line" onmouseover="show_point()" onmouseout="hide_point()" style="width: 600px;height:400px;"></div>
+
+	<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('chart_line'));
+
+        // 指定图表的配置项和数据
+        var option = {
+		    grid: {
+		        show: true,
+		        zlevel: 1,
+		        z: 1,
+		        backgroundColor: "rgba(105,100,2,0.5)",
+		    },
+		    xAxis: {
+		        type: 'category',
+		        boundaryGap: false,
+		        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+		    },
+		    yAxis: {
+		        type: 'value'
+		    },
+		    series: [{
+		        data: [820, 400, 901, 934, 1290, 1530, 1320],
+		        type: 'line',
+		        smooth: true,
+		        showSymbol: false,
+		        color: "black",
+		        borderColor: "red",
+		        areaStyle: {
+		            color: "blue",
+		        },
+		    }],
+		};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+        function show_point(){
+        	option["series"][0]["showSymbol"] = true;
+
+        	myChart.setOption(option);
+        }
+
+        function hide_point() {
+        	option["series"][0]["showSymbol"] = false;
+        	myChart.setOption(option);
+        }
+
+
+    </script>
+
+</body>
+</html>
