@@ -37,6 +37,7 @@ function default_show(){
             {
                 name:'空间占用',
                 type:'pie',
+                // 设置圆圈大小
                 radius: ['35%', '70%'],
                 // avoidLabelOverlap: true,
                 label: {
