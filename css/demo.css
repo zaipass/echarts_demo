@@ -3,9 +3,10 @@ html,body,table,canvas,ul,li,div,iframe{
     margin: 0;
 }
 
-#chart_line_one,#chart_line_two,#chart_line_three{
+#chart_line_one{
     /* 设置div的宽高 */
     width: 450px;
     height: 300px;
+    /* background: black; */
     float: left;
 }

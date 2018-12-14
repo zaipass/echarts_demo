@@ -1,13 +1,18 @@
 // 定义全局变量
 var myChart = '';
-var option = '';
+var option_one = '';
 
 window.onload = function(){
+    own();
+}
+
+// 定义函数
+function own(){
     // 基于准备好的dom，初始化echarts实例
-     myChart= echarts.init(document.getElementById('chart_line_one'));
+    myChart= echarts.init(document.getElementById('chart_line_one'));
 
     // 指定图表的配置项和数据
-    option = {
+    option_one = {
         grid: {
             // 显示内层的布局
             show: true,
@@ -47,18 +52,20 @@ window.onload = function(){
     };
 
     // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
+    myChart.setOption(option_one);
+
+    default_show();
 }
 
 // 鼠标停在div,显示转折点
 function show_point(){
-    option["series"][0]["showSymbol"] = true;
+    option_one["series"][0]["showSymbol"] = true;
 
-    myChart.setOption(option);
+    myChart.setOption(option_one);
 }
 
 // 鼠标移开div,转折点消失
 function hide_point() {
-    option["series"][0]["showSymbol"] = false;
-    myChart.setOption(option);
+    option_one["series"][0]["showSymbol"] = false;
+    myChart.setOption(option_one);
 }
