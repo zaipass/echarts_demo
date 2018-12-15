@@ -22,16 +22,17 @@ function default_show(){
         legend: {
             orient: 'vertical',
             bottom: 0,
-            formatter: function(name){
-                var data = d;
-                var target ;
-                for(var v=0;v<data.length;v++){
-                    if(data[v]['name'] == name){
-                        target = data[v]['value']
-                    }
-                }
-                return name + target
-            },
+            // formatter: function(name){
+            //     var data = d;
+            //     var target ;
+            //     for(var v=0;v<data.length;v++){
+            //         if(data[v]['name'] == name){
+            //             target = data[v]['value']
+            //         }
+            //     }
+            //     return name + target
+            // },
+            formatter: '{name}',
         },
         series: [
             {
