@@ -67,4 +67,6 @@ function default_show(){
         ]
     };
     pie_chart.setOption(option_two);
+
+    line_time();
 }

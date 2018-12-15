@@ -55,6 +55,7 @@ function own(){
     myChart.setOption(option_one);
 
     default_show();
+    
 }
 
 // 鼠标停在div,显示转折点
